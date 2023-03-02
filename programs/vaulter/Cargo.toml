@@ -1,0 +1,20 @@
+[package]
+name = "vaulter"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "vaulter"
+
+[features]
+no-entrypoint = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = {version="0.25.0", features = ["init-if-needed"] }
+anchor-spl = "0.25.0"
+mpl-token-metadata = { version="1.2.10", features = [ "no-entrypoint" ] }
